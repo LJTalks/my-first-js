@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JS</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <section>
+        <header>
+            <div class="logo-text">
+                <a href="/index.html"></a><h1>My First JavaScript</h1>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/todo/index.html">To Do List</a>
+                    <a href="/mb-number-game/index.html">Mark's Number Game</a>
+                    <a href="/1/main.html">Project 1 (Incomplete?)</a>
+                </div>
+
+                <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function (event) {
+                        if (!event.target.matches('.dropbtn')) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                    openDropdown.classList.remove('show');
+                                }
+                            }
+                        }
+                    }
+                </script>
+
+            </div>
+        </header>
+
+        <!-- To Do List -->
+        <section id="todo-list">
+            <div id="items"></div>
+            <template id="itemTemplate">
+                <div class="items">
+                    <input type="checkbox" class="item-completed">
+                    <input type="text" class="item-description" placeholder="To Do Item...">
+                </div>
+            </template>
+    
+            <button id="add">Add Item</button>
+        </section>
+</body>
+</html>
