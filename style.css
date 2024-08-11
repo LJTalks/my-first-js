@@ -8,6 +8,9 @@ body {
 }
 
 /* Header */
+header {
+  background-color: lightcoral;
+}
 
 /* Dropdown Button */
 .dropbtn {
@@ -27,8 +30,8 @@ body {
 
   /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    float: right;
     position: relative;
+    flex: end;
     display: inline-block;
   }
 

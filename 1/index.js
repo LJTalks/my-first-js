@@ -1,3 +1,8 @@
-const title = document.querySelector("h1");
+const body = document.getElementsByTagName("body")[0]
+body.style.backgroundColor = "red"
 
-title.style.color 
+function setColor(name) {
+    body.style.backgroundColor = name;
+}
+
+setColor("green")
