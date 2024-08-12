@@ -70,6 +70,13 @@ body {
 
 
 /* TO do list styles */
+.todo-section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+}
+
 .item-description {
   padding: 5px;
   width: 80%;
