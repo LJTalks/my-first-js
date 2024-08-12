@@ -6,7 +6,7 @@ body {
 }
 
 /* Header */
-header {
+.header {
   background-color: lightcoral;
   padding: 20px;
   display: flex;
