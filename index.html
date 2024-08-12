@@ -1,74 +1,70 @@
 <!DOCTYPE html>
+<!--https://www.youtube.com/watch?v=S-VeYcOCFZw&t=1s-->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First JS</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Laura's JS Projects</title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 
 <body>
     <div class="header">
-        <div class="logo-text">
-            <a href="/index.html"></a>
-            <h1>My First JavaScript</h1>
-            <p>A few simple walkthrough JS projects</p>
-        </div>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="/projects/brocode-dropdown/index.html">Brocode Dropdown</a>
-                <a href="/projects/slot-machine/index.html">Slot Machine</a>
-                <a href="/projects/webdev-dropdown/index.html">Webdev Dropdown</a>
-                <a href="/projects/random-quote-generator/index.html">Random Quote Generator</a>
-                <a href="/projects/todo/index.html">To Do List</a>
-                <a href="/projects/mb-number-game/index.html">Mark's Number Game</a>
-                <a href="/projects/color-switcher/index.js">Color Switcher</a>
-                <a href="/projects/flexbox/index.html">Flexbox</a>
-                <a href="/projects/webdev-snake-game/index.html">WebDev Snake</a>
-                <a href="/projects/Palindrome Checker/index.html">Palindrome Checker</a>
-                <a href="/projects/w3dropdown-menu/main.html">W3 Dropdown Menu</a>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Projects</button>
+            <div class="dropdown-menu information-grid">
+                <div>
+                    <div class="dropdown-heading">Practical Stuff</div>
+                    <div class="dropdown-links">
+                        <a href="/projects/old-home/index.html" class="link">All</a>
+                        <a href="#" class="link">Latest</a>
+                        <a href="#" class="link">Popular</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown-heading">Fun Stuff</div>
+                    <div class="dropdown-links">
+                        <a href="#" class="link">JavaScript</a>
+                        <a href="#" class="link">CSS</a>
+                        <a href="#" class="link">React</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown-heading">Blog</div>
+                    <div class="dropdown-links">
+                        <a href="#" class="link">All</a>
+                        <a href="#" class="link">Latest</a>
+                        <a href="#" class="link">Popular</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown-heading">Other</div>
+                    <div class="dropdown-links">
+                        <a href="#" class="link">Twitter</a>
+                        <a href="#" class="link">Newsletter</a>
+                        <a href="#" class="link">Discord</a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <script>
-            /* When the user clicks on the button, 
-                    toggle between hiding and showing the dropdown content */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function (event) {
-                if (!event.target.matches('.dropbtn')) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
-                    }
-                }
-            }
-        </script>
+        <a href="#" class="link">Pricing</a>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Login</button>
+<div class="dropdown-menu">
+<form class="login-form">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+    <button type="submit">Login</button>
+</form>
+</div>
+        </div>
     </div>
-    <main>
-        <!-- To Do List -->
-        <section id="todo-list">
-            <h2>To Do List</h2>
-            <div id="items"></div>
-            <template id="itemTemplate">
-                <div class="items">
-                    <input type="checkbox" class="item-completed">
-                    <input type="text" class="item-description" placeholder="To Do Item...">
-                </div>
-            </template>
-            <button id="add">Add Item</button>
-        </section>
-    </main>
+
+
 </body>
 
 </html>
