@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirational Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #quote {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #author {
+            font-size: 18px;
+            color: #555;
+        }
+
+        #get-quote {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quote">Click the button to get an inspirational quote!</div>
+    <div id="author"></div>
+    <button id="get-quote">Get New Quote</button>
+
+    <script>
+        // Function to fetch a random quote from the Forismatic API
+        function fetchQuote() {
+            fetch('https://type.fit/api/quotes')
+                .then(response => response.json())
+                .then(data => {
+                    const randomIndex = Math.floor(Math.random() * data.length);
+                    const quote = data[randomIndex];
+                    document.getElementById('quote').innerText = `"${quote.text}"`;
+                    document.getElementById('author').innerText = `- ${quote.author || 'Unknown'}`;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Event listener for the button
+        document.getElementById('get-quote').addEventListener('click', fetchQuote);
+    </script>
+</body>
+
+</html>
