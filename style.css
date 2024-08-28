@@ -1,3 +1,8 @@
+:root {
+    --main-color: #ff0077;
+    --box-shadow-color: rgba(255, 0, 119, 0.9);
+}
+
 body {
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -25,6 +30,8 @@ body {
 .dropdown.active > .link,
 .link:hover {
     color: black;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--box-shadow-color);
 }
 
 .dropdown {
